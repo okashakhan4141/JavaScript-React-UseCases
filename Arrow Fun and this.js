@@ -1,5 +1,18 @@
 'use strict'
 
+/*
+
+'this' in arrow function is not same as other functions
+In other functions this is pointing to an object that is calling that function.
+But, In case of arrow function, this will be of an object of outer function. i.e. Lexical this
+e.g:
+const fun = () =>
+{
+    this -> window object //since there's no outer function
+}
+
+*/
+
 const obj = {
     firstName: 'okasha',
     year: 1991,
