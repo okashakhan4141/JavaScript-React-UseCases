@@ -37,7 +37,6 @@ for (const value in arr)
 }
 
 //array.entries will give index and value pair i.e: [0, 'okasha']
-const arr = [`okasha`, `khan`, `CADM`, `ISL`];
 
 for (const [index, value] of arr.entries()) {
   console.log(`${index + 1}: ${value}`);
