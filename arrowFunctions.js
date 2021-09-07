@@ -95,7 +95,7 @@ const donated = [{ name: "Xavier", age: 19, city: "LA", donation: 20 },
 { name: "Jesicca", age: 28, city: "LA", donation: 20 },
 { name: "Alex", age: 15, city: "LA", donation: 20 }];
 
-// simple function
+// simple functions
 /*
 const donate = donated.filter(function (donated) {
   if (donated.age >= 18) {
@@ -103,6 +103,13 @@ const donate = donated.filter(function (donated) {
   }
 });
 console.log(" Donors above 18", donate);
+
+
+const sum = donated.reduce(function (total, amount) {
+  return total + amount.donation;
+}, 0);
+console.log("Total donations", sum);
+
 */
 
 // arrow function
@@ -110,9 +117,4 @@ const donate = donated.filter((donated) => donated.age >= 18);
 console.log(" Donors above 18", donate);
 
 const sum = donated.reduce((total, amount) => total + amount.donation, 0);
-console.log("Total donations", sum);
-
-const sum = donated.reduce(function (total, amount) {
-  return total + amount.donation;
-}, 0);
 console.log("Total donations", sum);
