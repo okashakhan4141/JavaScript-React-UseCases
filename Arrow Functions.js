@@ -72,7 +72,7 @@ const add = function (a, b) {
 const add = (a, b) =>  a + b;
 
 
-// USE CASE 4: Arrow function as an argument to another function
+// USE CASE 5: Arrow function as an argument to another function
 
 // simple function 
 /*
@@ -85,7 +85,7 @@ setTimeout(function () {
 setTimeout(() => console.log("Executed after 3 second"), 3000);
 
 
-// USE CASE 5: Apply filter and map using array function
+// USE CASE 6: Apply filter and map using array function
 
 // data
 const donated = [{ name: "Xavier", age: 19, city: "LA", donation: 20 },
