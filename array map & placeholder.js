@@ -23,7 +23,7 @@ const r = {
 };
 console.log('It is ' + r.t + r.m + ' for Player A. Game Stat:' + r.c);
 
-//By using placeholders, the same example statement can be written more clearly, as follows:
+// by using placeholders, the same example statement can be written more clearly, as follows:
 console.log('It is %s%s for Player A. Game Stat: %d', r.t, r.m, r.c);
 
 /*
