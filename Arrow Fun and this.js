@@ -45,3 +45,32 @@ const obj = {
 
   obj.greet();
   obj.calcAge();
+
+// another example
+const video = {
+  title: 'MCU',
+  tags: ['a', 'b', 'c'],
+
+  // both showTags act similarly
+
+  // showTags() {
+  //   this.tags.forEach(function (tag) {
+  //     console.log(this.title, tag);
+  //   }, this)
+  // }
+    
+  // ES6
+  showTags() {
+    this.tags.forEach(tag => {
+      console.log(this.title, tag);
+    })
+  }
+};
+
+video.showTags();
+
+/* Output:
+MCU a
+MCU b
+MCU c
+*/
