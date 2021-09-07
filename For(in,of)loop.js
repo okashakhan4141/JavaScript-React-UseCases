@@ -1,31 +1,44 @@
 'use strict'
 
-const jonas = {
-    firstName: 'Jonas',
-    year: 1991,
-    calcAge: function () {
-      // console.log(this);
-      console.log(2037 - this.year);
-  
-      // Solution 1
-      // const self = this; // self or that
-      // const isMillenial = function () {
-      //   console.log(self);
-      //   console.log(self.year >= 1981 && self.year <= 1996);
-      // };
-  
-      // Solution 2
-      const isMillenial = () => {
-        console.log(this);
-        console.log(this.year >= 1981 && this.year <= 1996);
-      };
-      isMillenial();
-    },
-  
-    greet: () => {
-      console.log(this);
-      console.log(`Hey ${this.firstName}`);
-    },
-  };
-  jonas.greet();
-  jonas.calcAge();
+const obj = {
+  firstName: `okasha`,
+  lastNAme: `khan`,
+  dob: `20 Dec, 1999`
+};
+
+const arr = [`okasha`, `khan`, `20 DEc`];
+
+console.log(`------------FOR IN ON OBJ`);
+//this will iterate over the properties of objects
+for (const property in obj)
+{
+  console.log(property);
+}
+
+console.log(`------------FOR OF ON ARR`);
+//this will iterate over the all iterable objects e.g: Arrays, Set, Maps etc
+for (const value of arr)
+{
+  console.log(value);
+}
+
+console.log(`------------FOR OF ON OBJ`);
+//will give error: Obj is not a iterable
+// for (const property of obj)
+// {
+//   console.log(property);
+// }
+
+console.log(`------------FOR IN ON ARR`);
+//will give the indexes
+for (const value in arr)
+{
+  console.log(value, arr[value]);
+}
+
+//array.entries will give index and value pair i.e: [0, 'okasha']
+const arr = [`okasha`, `khan`, `CADM`, `ISL`];
+
+for (const [index, value] of arr.entries()) {
+  console.log(`${index + 1}: ${value}`);
+}
