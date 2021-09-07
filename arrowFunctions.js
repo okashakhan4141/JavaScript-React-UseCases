@@ -1,5 +1,6 @@
 //In this file all the use cases of the arrow functions will be defined. 
 
+
 //USE CASE 01: Getting rid of the function keyword
 
 const functionWithKeyWord = function(){
@@ -25,6 +26,7 @@ const functionSmall = () => 2+2;
 //console.log(functionBig);
 //console.log(functionSmall);
 
+
 // USE CASE 03: Arrow function and this keyword
 
 /*In the example below, it is not recommended to use the arrow function 
@@ -46,3 +48,71 @@ const cameras = {
 }
 
 console.log(cameras.myDes());
+
+
+// USE CASE 4: Arrow Functions with parameters
+
+// simple function
+/*
+function square(a) {
+    return a * a;
+}*/
+
+// arrow function - in case of single parameter, we can remove paranthesis
+const square = a => a * a;  // since function has single line of code, so we can remove {} and also return keyword
+
+//simple function
+/*
+const add = function (a, b) {
+    return a + b;
+};
+*/
+
+// arrow function - multiple parameters
+const add = (a, b) =>  a + b;
+
+
+// USE CASE 4: Arrow function as an argument to another function
+
+// simple function 
+/*
+setTimeout(function () {
+  console.log("Executed after 3 second");
+}, 3000);
+*/
+
+// arrow function
+setTimeout(() => console.log("Executed after 3 second"), 3000);
+
+
+// USE CASE 5: Apply filter and map using array function
+
+// data
+const donated = [{ name: "Xavier", age: 19, city: "LA", donation: 20 },
+{ name: "David", age: 16, city: "georgia", donation: 20 },
+{ name: "Amanda", age: 18, city: "wahingon DC", donation: 20 },
+{ name: "Amy", age: 20, city: "chicago", donation: 20 },
+{ name: "Jesicca", age: 28, city: "LA", donation: 20 },
+{ name: "Alex", age: 15, city: "LA", donation: 20 }];
+
+// simple function
+/*
+const donate = donated.filter(function (donated) {
+  if (donated.age >= 18) {
+    return true;
+  }
+});
+console.log(" Donors above 18", donate);
+*/
+
+// arrow function
+const donate = donated.filter((donated) => donated.age >= 18);
+console.log(" Donors above 18", donate);
+
+const sum = donated.reduce((total, amount) => total + amount.donation, 0);
+console.log("Total donations", sum);
+
+const sum = donated.reduce(function (total, amount) {
+  return total + amount.donation;
+}, 0);
+console.log("Total donations", sum);
