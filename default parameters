@@ -1,0 +1,17 @@
+// default parameters
+
+// ES5
+function display(arg) {
+  arg = arg ? arg : 2;
+  console.log(arg); // if above line is commented, it displays 'undefined' when no value is sent
+}
+display(5)  // displays '5'
+display();  // displays '2'
+
+// ES6
+function print(arg = 2) {
+  console.log(arg);
+}
+
+print(4); // displays '4'
+print();  // displays '2'
