@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple JQuery vs React</title>
+  </head>
+
+  <style>
+    .paddings {
+      padding: 190px;
+    }
+    .headings {
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="paddings"></div>
+    <div>
+      <h1 class="headings">Hamza Ayad</h1>
+      <h3 id="age" class="headings" onclick="displayAge()">
+        Click here to display the age
+      </h3>
+    </div>
+  </body>
+  <script>
+    function displayAge() {
+      if (
+        document.getElementById("age").innerText ==
+        "Click here to display the age"
+      ) {
+        document.getElementById("age").innerText = "Age: 21";
+      } else {
+        document.getElementById("age").innerText =
+          "Click here to display the age";
+      }
+    }
+  </script>
+</html>
